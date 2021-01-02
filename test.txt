@@ -1,2 +1,2 @@
-data/obj/37.jpg
-data/obj/45.jpg
+build/darknet/x64/data/obj/37.jpg
+build/darknet/x64/data/obj/45.jpg
