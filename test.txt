@@ -1,2 +1,3 @@
-build/darknet/x64/data/obj/37.jpg
-build/darknet/x64/data/obj/45.jpg
+build/darknet/x64/data/obj/t1.jpg
+build/darknet/x64/data/obj/t2.jpg
+build/darknet/x64/data/obj/t3.jpg
