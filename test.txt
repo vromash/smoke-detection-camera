@@ -1,0 +1,2 @@
+data/obj/37.jpg
+data/obj/45.jpg
