@@ -93,7 +93,7 @@ build/darknet/x64/data/obj/182.jpg
 build/darknet/x64/data/obj/183.jpg
 build/darknet/x64/data/obj/184.jpg
 build/darknet/x64/data/obj/185.jpg
-build/darknet/x64/data/obj/186.jpeg
+build/darknet/x64/data/obj/186.jpg
 build/darknet/x64/data/obj/187.jpg
 build/darknet/x64/data/obj/188.jpg
 build/darknet/x64/data/obj/189.jpg
