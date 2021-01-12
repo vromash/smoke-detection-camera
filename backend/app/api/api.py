@@ -1,4 +1,5 @@
 from flask_restful import Api
+from config import app
 
 import os
 
