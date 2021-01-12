@@ -14,7 +14,8 @@ def in_darknet(func):
             return func(*args, **kwargs)
         except:
             e = sys.exc_info()[0]
-            print('Error has occured', e)
+            print(e)
+            return e
     return wrapper_in_darknet
 
 def prepare_stats(path):
