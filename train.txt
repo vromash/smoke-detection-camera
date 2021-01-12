@@ -171,7 +171,7 @@ build/darknet/x64/data/obj/31.jpg
 build/darknet/x64/data/obj/32.jpg
 build/darknet/x64/data/obj/33.jpg
 build/darknet/x64/data/obj/34.jpg
-build/darknet/x64/data/obj/35.png
+build/darknet/x64/data/obj/35.jpg
 build/darknet/x64/data/obj/36.jpg
 build/darknet/x64/data/obj/37.jpg
 build/darknet/x64/data/obj/38.jpg
@@ -185,7 +185,7 @@ build/darknet/x64/data/obj/44.jpg
 build/darknet/x64/data/obj/45.jpg
 build/darknet/x64/data/obj/46.jpg
 build/darknet/x64/data/obj/47.jpg
-build/darknet/x64/data/obj/48.png
+build/darknet/x64/data/obj/48.jpg
 build/darknet/x64/data/obj/49.jpg
 build/darknet/x64/data/obj/5.jpg
 build/darknet/x64/data/obj/50.jpg
