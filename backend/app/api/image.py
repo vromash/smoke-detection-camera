@@ -21,18 +21,14 @@ class ImageApi(Resource):
         image_path = download_image(url)
 
         command = f'./darknet detector test \
-            /content/darknet/build/darknet/x64/data/obj.data \
-            /content/darknet/cfg/yolov4-tiny-obj.cfg \
-            /content/darknet/build/darknet/x64/backup/yolov4-tiny-obj_last.weights { image_path } -i 0 -thresh 0.20'
+            build/darknet/x64/data/obj.data \
+            cfg/yolov4-tiny-obj.cfg \
+            build/darknet/x64/backup/yolov4-tiny-obj_last.weights { image_path } -i 0 -thresh 0.20'
 
         process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
-        with open('out1.txt', 'w') as f1:
-            print(process, command, file=f1) 
         process_alive = True
         while process_alive:
             output = process.stdout.readline()
-            with open('out2.txt', 'w') as f2:
-                print(output, file=f2) 
             if print_output:
                 print(output)
 
