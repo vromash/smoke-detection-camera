@@ -8,8 +8,6 @@ import shlex
 import subprocess
 import os
 
-from lib.utils import in_darknet
-
 class ImageApi(Resource):
     @in_darknet
     def post(self):
