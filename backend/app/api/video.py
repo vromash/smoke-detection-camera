@@ -22,7 +22,7 @@ class VideoApi(Resource):
         command = f'./darknet detector demo \
             build/darknet/x64/data/obj.data \
             cfg/yolov4-tiny-obj.cfg \
-            build/darknet/x64/backup/yolov4-tiny-obj_final.weights \
+            build/darknet/x64/backup/yolov4-tiny-obj_last.weights \
             -thresh 0.25 -dont_show test-video.mp4 -out_filename {output_video}'
 
         stats = prepare_stats(video_path)

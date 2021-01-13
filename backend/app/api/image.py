@@ -20,10 +20,10 @@ class ImageApi(Resource):
 
         image_path = download_image(url)
 
-        command = f'./content/darknet/darknet detector test \
+        command = f'./darknet detector test \
             build/darknet/x64/data/obj.data \
             cfg/yolov4-tiny-obj.cfg \
-            build/darknet/x64/backup/yolov4-tiny-obj_final.weights { image_path } -i 0 -thresh 0.20'
+            build/darknet/x64/backup/yolov4-tiny-obj_last.weights { image_path } -i 0 -thresh 0.20'
 
         process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
         process_alive = True
