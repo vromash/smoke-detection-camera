@@ -8,8 +8,6 @@ import shlex
 import subprocess
 import os
 
-from lib.utils import in_darknet
-
 class ImageApi(Resource):
     @in_darknet
     def post(self):
@@ -23,7 +21,7 @@ class ImageApi(Resource):
         command = f'./darknet detector test \
             build/darknet/x64/data/obj.data \
             cfg/yolov4-tiny-obj.cfg \
-            build/darknet/x64/backup/yolov4-tiny-obj_final.weights { image_path } -i 0 -thresh 0.20'
+            build/darknet/x64/backup/yolov4-tiny-obj_last.weights { image_path } -i 0 -thresh 0.20'
 
         process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
         process_alive = True
@@ -33,7 +31,7 @@ class ImageApi(Resource):
                 print(output)
 
             if output == b'' and process.poll() is not None:
-                process_alive = False  
+                process_alive = False
 
-        return send_file(image_path, attachment_filename=image_path, mimetype='image/jpg')
+        return send_file(darknet_path + '/predictions.jpg', mimetype='image/jpg')
         
