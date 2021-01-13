@@ -13,15 +13,14 @@ def parse_line(output, targets, stats):
         return
 
     for class_name in targets:
-        percentage = ''
         if class_name in str_output:
             percentage = re.findall('[0-9][0-9]', str_output)
             if int(percentage[0]) < success_limit:
                 return
         
-        item['name'] = class_name
-        item['percentage'] = int(percentage[0])
-        update_statistics(stats, item)
+            item['name'] = class_name
+            item['percentage'] = int(percentage[0])
+            update_statistics(stats, item)
 
 def update_statistics(stats, item):
     if item['name'] == 'frame':
