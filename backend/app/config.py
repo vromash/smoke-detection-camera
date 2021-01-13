@@ -2,4 +2,4 @@ from flask import Flask
 import os
 
 app = Flask(__name__)
-darknet_path = 'darknet'
+darknet_path = '/content/darknet'
