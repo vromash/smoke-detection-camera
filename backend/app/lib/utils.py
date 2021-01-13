@@ -35,7 +35,7 @@ def get_video_data(path):
 
 @in_darknet
 def download_video(url):
-    filename = f'build/darknet/x64/data/obj/test-video.mp4'
+    filename = f'{darknet_path}/build/darknet/x64/data/obj/test-video.mp4'
     command = f'youtube-dl -f \'[ext=mp4]\' -o {filename} {url}'
     process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
     process_alive = True
@@ -48,7 +48,7 @@ def download_video(url):
 
 @in_darknet
 def download_image(url):
-    filename = f'build/darknet/x64/data/obj/test.jpg'
+    filename = f'{darknet_path}/build/darknet/x64/data/obj/test.jpg'
     command = f'wget {url} -O {filename}'
     process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
     process_alive = True
