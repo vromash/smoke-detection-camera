@@ -1,0 +1,47 @@
+:root {
+    --c-button-primary:  #b60018;
+    --c-button-dark: #941317;
+    --c-white: #ffffff
+}
+
+.FileExport {
+    &-InputField {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            max-width: 400px;
+            height: 30px;
+        }
+    }
+
+    &-Container {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 15px;
+    }
+
+    button {
+        outline: none;
+        border: 1px solid var(--c-button-primary);
+        background: var(--c-button-primary);
+        margin-left: 10px;
+        height: 36px;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        color: var(--c-white);
+        font-weight: 600;
+        transition: 500ms;
+        cursor: pointer;
+
+        &:hover {
+            border-color: var(--c-button-dark);
+            background: var(--c-button-dark);
+        }
+    }
+}

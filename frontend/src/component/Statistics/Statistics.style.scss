@@ -1,0 +1,45 @@
+:root {
+    --c-light-gray: #d3d3d3;
+    --c-link-color: #3ba4e9;
+}
+
+.Statistics {
+    width: 40%;
+
+    &-Table {
+        &Heading {
+            display: grid;
+            grid-template-columns: 20% 20% 60%;
+            text-align: center;
+            border-bottom: 1px solid var(--c-light-gray);
+            border-top: 1px solid var(--c-light-gray);
+        }
+
+        &Row {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            text-align: center;
+            border-bottom: 1px solid var(--c-light-gray);
+        }
+
+        &Frames {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            button {
+                margin: 1.33em 0;
+                background: none;
+                border: none;
+                outline: none;
+                font-size: 16px;
+                text-decoration: underline;
+                color: var(--c-link-color);
+                cursor: pointer;
+                font-weight: 600;
+            }
+        }
+    }
+}
