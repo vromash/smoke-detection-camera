@@ -26,13 +26,13 @@ class ImageApi(Resource):
             build/darknet/x64/backup/yolov4-tiny-obj_last.weights { image_path } -i 0 -thresh 0.20'
 
         process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
-        with open('out1.txt', 'w') as f:
-            print(output, process, command, file=f) 
+        with open('out1.txt', 'w') as f1:
+            print(process, command, file=f1) 
         process_alive = True
         while process_alive:
             output = process.stdout.readline()
-            with open('out2.txt', 'w') as f:
-                print(output, command, file=f) 
+            with open('out2.txt', 'w') as f2:
+                print(output, file=f2) 
             if print_output:
                 print(output)
 
