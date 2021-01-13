@@ -13,7 +13,9 @@ from lib.utils import in_darknet
 class ImageApi(Resource):
     @in_darknet
     def post(self):
-        json_data = request.get_json(force=True)
+        # json_data = request.get_json(force=True)
+
+        json_data = request.form.get('data')
 
         url = json_data['url']
         print_output = json_data['print_output']
