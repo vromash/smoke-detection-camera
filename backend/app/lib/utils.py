@@ -15,8 +15,8 @@ def in_darknet(func):
         except:
             e = sys.exc_info()
             print(e)
-            with open('out.txt', f'{func}', 'w') as f:
-               print(e, file=f) 
+            with open('out.txt', 'w') as f:
+               print(e, func, f'{func}', file=f) 
             return e
     return wrapper_in_darknet
 
