@@ -20,20 +20,22 @@ class ImageApi(Resource):
 
         image_path = download_image(url)
 
-        command = f'./darknet detector test \
-            build/darknet/x64/data/obj.data \
-            cfg/yolov4-tiny-obj.cfg \
-            build/darknet/x64/backup/yolov4-tiny-obj_final.weights { image_path } -i 0 -thresh 0.20'
+        return image_path
 
-        process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
-        process_alive = True
-        while process_alive:
-            output = process.stdout.readline()
-            if print_output:
-                print(output)
+        # command = f'./darknet detector test \
+        #     build/darknet/x64/data/obj.data \
+        #     cfg/yolov4-tiny-obj.cfg \
+        #     build/darknet/x64/backup/yolov4-tiny-obj_final.weights { image_path } -i 0 -thresh 0.20'
 
-            if output == b'' and process.poll() is not None:
-                process_alive = False  
+        # process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
+        # process_alive = True
+        # while process_alive:
+        #     output = process.stdout.readline()
+        #     if print_output:
+        #         print(output)
 
-        return send_file(darknet_path + '/predictions.jpg', mimetype='image/jpg')
+        #     if output == b'' and process.poll() is not None:
+        #         process_alive = False  
+
+        # return send_file(darknet_path + '/predictions.jpg', mimetype='image/jpg')
         
