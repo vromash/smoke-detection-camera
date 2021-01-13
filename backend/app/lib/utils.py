@@ -15,6 +15,8 @@ def in_darknet(func):
         except:
             e = sys.exc_info()[0]
             print(e)
+            with open('out.txt', 'w') as f:
+               print(e, file=f) 
             return 'Error has occured'
     return wrapper_in_darknet
 
