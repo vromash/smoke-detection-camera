@@ -26,14 +26,18 @@ class ImageApi(Resource):
             build/darknet/x64/backup/yolov4-tiny-obj_last.weights { image_path } -i 0 -thresh 0.20'
 
         process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
+        with open('out1.txt', 'w') as f:
+            print(output, process, command, file=f) 
         process_alive = True
         while process_alive:
             output = process.stdout.readline()
+            with open('out2.txt', 'w') as f:
+                print(output, command, file=f) 
             if print_output:
                 print(output)
 
             if output == b'' and process.poll() is not None:
-                process_alive = False  
+                process_alive = False
 
         return send_file(darknet_path + '/predictions.jpg', mimetype='image/jpg')
         
