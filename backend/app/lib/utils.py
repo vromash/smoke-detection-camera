@@ -13,11 +13,11 @@ def in_darknet(func):
         try:
             return func(*args, **kwargs)
         except:
-            e = sys.exc_info()[0]
+            e = sys.exc_info()
             print(e)
             with open('out.txt', 'w') as f:
                print(e, file=f) 
-            return 'Error has occured'
+            return e
     return wrapper_in_darknet
 
 def prepare_stats(path):
