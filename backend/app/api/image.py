@@ -35,5 +35,5 @@ class ImageApi(Resource):
             if output == b'' and process.poll() is not None:
                 process_alive = False  
 
-        return send_file(image_path, attachment_filename=image_path, mimetype='image/jpg')
+        return send_file(darknet_path + '/predictions.jpg', mimetype='image/jpg')
         
